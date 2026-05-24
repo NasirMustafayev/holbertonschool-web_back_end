@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
-'''Write a type-annotated function sum_list that takes a list of floats as argument
-and returns the sum of the floats as a float.'''
+'''Write a type-annotated function sum_list that takes a list of floats
+as argument and returns the sum of the floats as a float.'''
 from typing import List
 
 
