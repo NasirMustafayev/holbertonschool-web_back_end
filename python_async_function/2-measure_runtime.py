@@ -8,7 +8,7 @@ wait_n = importlib.import_module(
 ).wait_n
 
 
-async def measure_runtime(n: int, max_delay: int) -> float:
+async def measure_time(n: int, max_delay: int) -> float:
     '''Measures the total runtime of wait_n(n)'''
     start_time = time.time()
     await asyncio.gather(*[wait_n(i, max_delay) for i in range(n)])
