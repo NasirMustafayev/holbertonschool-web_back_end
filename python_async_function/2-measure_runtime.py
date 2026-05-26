@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-'''This module contains an async function measure_runtime'''
+'''This module contains a function measure_time'''
 import time
 import asyncio
 import importlib
@@ -8,9 +8,10 @@ wait_n = importlib.import_module(
 ).wait_n
 
 
-async def measure_time(n: int, max_delay: int) -> float:
-    '''Measures the total runtime of wait_n(n)'''
+def measure_time(n: int, max_delay: int) -> float:
+    '''Measures average execution time per coroutine'''
     start_time = time.time()
-    await asyncio.gather(*[wait_n(i, max_delay) for i in range(n)])
+    asyncio.run(wait_n(n, max_delay))
     end_time = time.time()
-    return end_time - start_time
+
+    return (end_time - start_time) / n
