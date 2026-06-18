@@ -1,0 +1,4 @@
+// creating a database
+use my_db
+
+db.my_collection.insertOne({ greeting: "Hello, World!" })
