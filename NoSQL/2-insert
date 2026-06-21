@@ -1,5 +1,5 @@
 //inserting a document
 
 db.school.insertOne({
-    "name": "Holberton"
+    "name": "Holberton school"
 })
