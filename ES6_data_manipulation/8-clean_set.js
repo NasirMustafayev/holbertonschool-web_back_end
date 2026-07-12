@@ -1,0 +1,16 @@
+function cleanSet(set, startString) {
+  if (typeof startString !== 'string' || startString.length === 0) {
+    return '';
+  }
+
+  let result = '';
+  for (const item of set) {
+    if (item.startsWith(startString)) {
+      result += item.slice(startString.length) + '-';
+    }
+  }
+
+  return result.slice(0, -1); // Remove the trailing hyphen
+}
+
+export default cleanSet;
